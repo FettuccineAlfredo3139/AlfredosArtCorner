@@ -10,6 +10,7 @@ p{
 
 body { 
 	background-color:rgb(28, 28, 59);
+	position: relative;
 } 
 
 h1, h2, h3, h4, h5, h6 { 
@@ -21,42 +22,29 @@ img {
 	border-radius: 10px;
 }
 
+.links {
+	text-decoration: underline;
+}
+
 .images {
 	border-radius: 15px;
 	align-items:center;
 }
 
-.links {
-	color:azure;
-	font-family:sans-serif;
+* {
+	padding: 0;
+	margin: 0;
 }
 
-.links:hover {
-	color:azure;
-	font-family:sans-serif;
+header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: #15152b;
 }
 
-.links:visited {
-	color:lightsalmon;
-	font-family:sans-serif;
-}
-
-.menu {
-	float:left;
-	width:20%;
-}
-
-.menuitem {
-	padding: 8px;
-	margin-top: 7px;
-	border-bottom: 1px solid #f1f1f1;
-	border-right: 1px solid #f1f1f1;
-}
-
-.main {
-	float:right;
-	width:79%;
-	margin-left: 3px;
+li {
+	list-style: none;
 }
 
 .lists {
@@ -66,8 +54,97 @@ img {
 	width: 30%;
 }
 
-@media only screen and (max-width: 800px) {
-	.menu, .main, .menuitem, .lists {
-		width:100%
+a {
+	color: azure;
+	text-decoration: none;
+}
+
+.container {
+	width: 1600px;
+	margin: auto;
+}
+
+.subcontainer {
+	width: 85%;
+	margin: auto;
+}
+
+.navbar {
+	width: 100%;
+	min-height: 70px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 60px
+}
+
+.nav-branding {
+	font-size: 2rem;
+}
+
+.hamburger {
+	display: none;
+	cursor: pointer;
+}
+
+.bar {
+	display: block;
+	width: 15px;
+	height: 2px;
+	margin: 5px 0;
+	transition: all 0.3s ease;
+	background-color: azure;
+}
+
+#home {
+	margin-top: 70px;
+	border: 1px solid azure
+}
+
+@media(max-width:1600px) {
+	.container {
+		width: 100%;
+	}
+}
+
+@media(max-width:1024px) {
+	.hamburger {
+		display: block;
+	}
+
+	.hamburger.active .bar:nth-child(2){
+		opacity: 0;
+	}
+	.hamburger.active .bar:nth-child(1){
+		transform: translateY(8px) rotate(45deg);
+	}
+	.hamburger.active .bar:nth-child(3){
+		transform: translateY(-8px) rotate(-45deg);
+	}
+
+	.nav-menu {
+		position: fixed;
+		left: -100%;
+		top: 70px;
+		gap: 0;
+		flex-direction: column;
+		background-color: #15152b;
+		width: 100%;
+		text-align: center;
+		transition: 0.3s;
+	}
+
+	.nav-item {
+		margin: 16px 0;
+	}
+
+	.nav-menu.active {
+		left: 0;
 	}
 }
