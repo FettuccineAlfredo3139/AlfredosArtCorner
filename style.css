@@ -122,10 +122,10 @@ a {
 		opacity: 0;
 	}
 	.hamburger.active .bar:nth-child(1){
-		transform: translateY(8px) rotate(45deg);
+		transform: translateY(8px) rotate(54deg);
 	}
 	.hamburger.active .bar:nth-child(3){
-		transform: translateY(-8px) rotate(-45deg);
+		transform: translateY(-8px) rotate(-54deg);
 	}
 
 	.nav-menu {
