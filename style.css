@@ -18,17 +18,14 @@ h1, h2, h3, h4, h5, h6 {
 	font-family:sans-serif;
 }
 
-img {
-	border-radius: 10px;
-}
-
 .links {
 	text-decoration: underline;
 }
 
 .images {
-	border-radius: 15px;
-	align-items:center;
+	border-radius: 10px;
+	width: 33%;
+	height: auto;
 }
 
 * {
@@ -114,6 +111,13 @@ a {
 }
 
 @media(max-width:1024px) {
+	.images {
+		border-radius: 10px;
+		width: 49%;
+		height: auto;
+	}
+	
+
 	.hamburger {
 		display: block;
 	}
