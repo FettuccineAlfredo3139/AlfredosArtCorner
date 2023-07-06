@@ -22,7 +22,13 @@ h1, h2, h3, h4, h5, h6 {
 	text-decoration: underline;
 }
 
-.images {
+.headerimg {
+	border-radius: 10px;
+	height: 60px;
+	width: auto;
+}
+
+img {
 	border-radius: 10px;
 	width: 33%;
 	height: auto;
@@ -111,7 +117,7 @@ a {
 }
 
 @media(max-width:1024px) {
-	.images {
+	img {
 		border-radius: 10px;
 		width: 49%;
 		height: auto;
