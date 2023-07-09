@@ -1,22 +1,12 @@
-p{
-	color:azure;
-	font-family:sans-serif;
-}
-
-.text{
-	color:azure;
-	font-family:sans-serif;
+/* Made myself */
+p, .text, h1, h2, h3, h4, h5, h6, label {
+	color:var(--txt);
 }
 
 body { 
-	background-color:rgb(28, 28, 59);
+	background-color: var(--bg);
 	position: relative;
 } 
-
-h1, h2, h3, h4, h5, h6 { 
-	color:azure;
-	font-family:sans-serif;
-}
 
 .links {
 	text-decoration: underline;
@@ -34,6 +24,17 @@ img {
 	height: auto;
 }
 
+footer {
+	height: 70px;
+    width: 100%;
+    background-color: var(--hdr-ftr-bg);
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    gap: 60px;
+}
+
+/* hamburger menu */
 * {
 	padding: 0;
 	margin: 0;
@@ -43,17 +44,7 @@ header {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	background-color: #15152b;
-}
-
-footer {
-	height: 70px;
-    width: 100%;
-    background-color: rgb(21, 21, 43);
-    display: flex;
-    align-items: center;
-    padding: 0px 10px;
-    gap: 60px;
+	background-color: var(--hdr-ftr-bg);
 }
 
 li {
@@ -61,14 +52,14 @@ li {
 }
 
 .lists {
-	color: azure;
+	color: var(--txt);
 	border: 1px solid #f1f1f1;
 	padding: 3px;
 	width: 30%;
 }
 
 a {
-	color: azure;
+	color: var(--txt);
 	text-decoration: none;
 }
 
@@ -112,12 +103,12 @@ a {
 	height: 2px;
 	margin: 5px 0;
 	transition: all 0.3s ease;
-	background-color: azure;
+	background-color: var(--txt);
 }
 
 #home {
 	margin-top: 70px;
-	border: 1px solid azure
+	border: 1px solid var(--txt)
 }
 
 @media(max-width:1600px) {
@@ -133,6 +124,9 @@ a {
 		height: auto;
 	}
 	
+    footer {
+        gap: 10px;
+    }
 
 	.hamburger {
 		display: block;
@@ -167,4 +161,25 @@ a {
 	.nav-menu.active {
 		left: 0;
 	}
+}
+
+/* theme toggle */
+
+.color-picker > fieldset {
+    border: 0;
+    display: flex;
+    gap: 5px;
+    width: fit-content;
+}
+
+.light, :root:has(#light:checked) {
+    --bg: white;
+    --hdr-ftr-bg: #e6e6e6;
+    --txt: black;
+}
+
+.dark, :root:has(#dark:checked) {
+    --bg: rgb(28, 28, 59);
+    --hdr-ftr-bg: rgb(21, 21, 43);
+    --txt: azure;
 }
