@@ -86,7 +86,7 @@ a {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	gap: 60px
+	gap: 60px;
 }
 
 .nav-branding {
@@ -149,10 +149,12 @@ a {
 		width: 100%;
 		text-align: center;
 		transition: 0.3s;
+		background: var(--hdr-ftr-bg)
 	}
 
 	.nav-item {
 		margin: 16px 0;
+		background: var(--hdr-ftr-bg);
 	}
 
 	.nav-menu.active {
