@@ -148,7 +148,7 @@ a {
 		top: 70px;
 		gap: 0;
 		flex-direction: column;
-		background-color: #15152b;
+		background-color: var(--hdr-ftr-bg);
 		width: 100%;
 		text-align: center;
 		transition: 0.3s;
@@ -161,6 +161,42 @@ a {
 	.nav-menu.active {
 		left: 0;
 	}
+}
+
+/* Dropdown menu */
+/* Dropdown button  */
+.dropbtn {
+	background-color: var(--hdr-ftr-bg);
+	padding: 16px;
+	border: none;
+}
+
+/* <div> positioning the dropdown content */
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+/* dropdown content */
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: var(--hdr-ftr-bg);
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+	display: block;
 }
 
 /* theme toggle */
